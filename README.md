@@ -15,3 +15,12 @@ WireGuard was merged into the Linux kernel for 5.6. This repository contains a b
 ## License
 
 This project is released under the [GPLv2](COPYING).
+
+
+## Command
+```
+sudo rm /lib/modules/5.15.148-tegra/build
+sudo ln -s /usr/src/linux-headers-5.15.148-tegra-ubuntu22.04_aarch64/3rdparty/canonical/linux-jammy/kernel-source/ /lib/modules/5.15.148-tegra/build
+make -C wireguard-linux-compat/src -j2
+sudo make -C wireguard-linux-compat/src install
+```
